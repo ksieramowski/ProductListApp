@@ -1,0 +1,21 @@
+﻿@model ProductListApp.Models.Register
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post)) {
+    @Html.ValidationSummary();
+
+    <span>Login: </span>
+    <br />
+    @Html.TextBoxFor(x => x.Email)
+    <br />
+    <span>Password: </span>
+    <br />
+    @Html.PasswordFor(x => x.Password)
+    <br />
+    <span>Confirm password: </span>
+    <br />
+    @Html.PasswordFor(x => x.ConfirmPassword)
+    <br />
+    <br />
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+}

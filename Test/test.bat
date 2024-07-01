@@ -1,0 +1,1 @@
+dotnet test bin/debug/net8.0/Test.dll
