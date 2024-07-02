@@ -1,4 +1,105 @@
-﻿@model IEnumerable<ProductListApp.Models.Product>
+﻿@model ProductListApp.Models.Products
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div style="width: 100%">
+    <div style="width: 33%; position: fixed; left: 0;">
+        <div style="margin-left: 10%; margin-right: 10%">
+            <div class="row">
+                <form asp-action="Index">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="NewProduct.Name" class="control-label"></label>
+                        <input id="input-product-name" asp-for="NewProduct.Name" class="form-control" />
+                        <span asp-validation-for="NewProduct.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NewProduct.Price" class="control-label"></label>
+                        <input id="input-product-price" asp-for="NewProduct.Price" class="form-control" />
+                        <span asp-validation-for="NewProduct.Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NewProduct.Quantity" class="control-label"></label>
+                        <input id="input-product-quantity" asp-for="NewProduct.Quantity" class="form-control" />
+                        <span asp-validation-for="NewProduct.Quantity" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input id="button-add-product" type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 66%; position: fixed; right: 0">
+        <div style="margin-right: 5%">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NewProduct.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NewProduct.Price)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NewProduct.Quantity)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-product-list">
+                    @foreach (var item in Model.ProductList) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@* <div style="width: 100%">
+    <div style="width: 50%; position: fixed; left: 0;">
+        <div style="margin: 20px">
+            @await Html.PartialAsync("_CreateProduct", Model.NewProduct)
+        </div>
+    </div>
+
+    <div style="width: 50%; position: fixed; right: 0">
+        <div style="margin: 20px">
+            @await Html.PartialAsync("_ProductList", Model.ProductList)
+        </div>
+    </div>
+</div> *@
+
+
+
+
+
+
+
+
+@* @model IEnumerable<ProductListApp.Models.Product>
 
 @{
     ViewData["Title"] = "Index";
@@ -63,3 +164,4 @@
 
 
 
+ *@

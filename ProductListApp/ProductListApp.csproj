@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Login\**" />
+    <Compile Remove="Views\Register\**" />
+    <Content Remove="Views\Login\**" />
+    <Content Remove="Views\Register\**" />
+    <EmbeddedResource Remove="Views\Login\**" />
+    <EmbeddedResource Remove="Views\Register\**" />
+    <None Remove="Views\Login\**" />
+    <None Remove="Views\Register\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Products\Create.cshtml" />
+    <Content Remove="Views\Products\Details.cshtml" />
+    <Content Remove="Views\Shared\_CreateProduct.cshtml" />
+    <Content Remove="Views\Shared\_ProductList.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
       <PrivateAssets>all</PrivateAssets>
