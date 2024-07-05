@@ -8,14 +8,19 @@ namespace ProductListApp.Models {
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public string? UserId { get; set; }
         [ForeignKey("UserId")]
         public User? User { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "RequireName")]
+        [StringLength(50)]
+        [Display(Name = "Name")]
         public string? Name { get; set; }
 
+        [Display(Name = "CreationTime")]
         public DateTime? CreationTime { get; set; }
+
+        [Display(Name = "Status")]
+        public string? Status { get; set; }
     }
 }

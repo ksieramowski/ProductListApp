@@ -1,4 +1,4 @@
-﻿@model ProductListApp.Models.Product
+﻿@model ProductListApp.Models.ProductList
 
 @using Microsoft.AspNetCore.Mvc.Localization
 
@@ -21,17 +21,7 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" style="margin: 25px 0px"/>
+                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary margin-vert-25" />
             </div>
         </form>
     </div>
@@ -42,5 +32,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

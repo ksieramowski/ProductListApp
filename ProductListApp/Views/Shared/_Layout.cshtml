@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -17,25 +21,30 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="overflow:scroll">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProductLists" asp-action="Index">@Localizer["Products"]</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-right flex-grow-1">
+                        <li>
+                            @await Html.PartialAsync("_SelectLanguage")
                         </li>
                         @if (User.Identity.IsAuthenticated == false) {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">@Localizer["Register"]</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Log in</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">@Localizer["Login"]</a>
                             </li>
                         }
                         else {
-                            <li class="nav-item" style="margin-left: auto; margin-right: 0px;">
-                                <span class="nav-link text-dark">Hello, @User.Identity.Name!</span>
+                            <li class="nav-item navbar-right">
+                                <span class="nav-link text-dark">@Localizer["Welcome"], @User.Identity.Name!</span>
                             </li>
-                            <li class="nav-item" style="margin-left: 0px; margin-right: 0px;">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Log out</a>
+                            <li class="nav-item navbar-right">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@Localizer["Logout"]</a>
                             </li>
                         }
                     </ul>

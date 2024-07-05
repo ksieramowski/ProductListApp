@@ -1,11 +1,14 @@
 ﻿@model ProductListApp.Models.Login
 
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
 @{
     ViewData["Title"] = "Login";
 }
 
-<h1>@ViewData["Title"]</h1>
-
+<h3>@Localizer["Login"]</h3>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -25,10 +28,10 @@
                 <input asp-for="RememberMe" class="form-check-input" />
                 <label asp-for="RememberMe" class="form-check-label"></label>
             </div>
-            <button type="submit" class="btn btn-primary margin-vert-15">Login</button>
-            <p>Or <a asp-area="" asp-controller="Account" asp-action="Register">create an account</a>.</p>
-            
-                   
+            <button type="submit" class="btn btn-primary margin-vert-15">@Localizer["Log-in"]</button>
+            <p>@Localizer["Or"]
+                <a asp-area="" asp-controller="Account" asp-action="Register">@Localizer["CreateAccount"]</a>.
+            </p>
         </form>
     </div>
 </div>

@@ -1,0 +1,68 @@
+﻿@model ProductListApp.Models.ProductLists
+
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>@Localizer["YourListOfProducts"]</h3>
+
+<div>
+    <h5>@Localizer["CreateYourProductList"]</h5>
+    <form asp-action="Index" style="max-width: 300px">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="NewProductList.Name" class="control-label"></label>
+            <input id="input-product-name" asp-for="NewProductList.Name" class="form-control" />
+            <span asp-validation-for="NewProductList.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="margin: 25px 0px;">
+            <input id="button-add-product" type="submit" value="@Localizer["Create"]" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="min-width: 125px">
+                    @Html.DisplayNameFor(model => model.NewProductList.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NewProductList.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NewProductList.CreationTime)
+                </th>
+                <th>
+                    @Localizer["Actions"]
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody-product-list-list">
+            @foreach (var item in Model.ListOfProductLists) {
+                <tr>
+                    <td style="word-break: break-word">
+                        @Html.ActionLink(item.Name, "Index", "Products", new { listId = item.Id, listName = item.Name }, null)
+                    </td>
+                    <td style="width:25%">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td style="width:25%">
+                        @Html.DisplayFor(modelItem => item.CreationTime)
+                    </td>
+                    <td class="fit-content">
+                        <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration: none">
+                            <button class="btn btn-primary">@Localizer["Edit"]</button>
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration: none">
+                            <button class="btn btn-danger">@Localizer["Delete"]</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

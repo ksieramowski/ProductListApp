@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using OpenQA.Selenium.DevTools.V124.Audits;
 using ProductListApp.Data;
 using ProductListApp.Models;
 
@@ -20,34 +23,50 @@ namespace ProductListApp.Controllers {
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index() {
-            return View(new Products(new Product(), await _context.Products.ToListAsync()));
+        public async Task<IActionResult> Index(int? listId, string? listName) {
+            if (listId == 0 || listId == null) {
+                listId = (int?)TempData["ProductListId"];
+                listName = (string?)TempData["ProductListName"];
+
+                TempData.Keep("ProductListId");
+                TempData.Keep("ProductListName");
+            }
+            else {
+                TempData["ProductListId"] = listId;
+                TempData["ProductListName"] = listName;
+            }
+
+            return View(new Products(listName, new Product(), await GetProducts(listId)));
         }
 
         [HttpPost]
         public async Task<IActionResult> Index(Products products) {
+            TempData.Keep("ProductListId");
+            TempData.Keep("ProductListName");
+
+            if (TempData["ProductListId"] is int listId) {
+                products.NewProduct.ProductListId = listId;
+            }
+            else { return NotFound(); }
+            string? productListName = (string?)TempData["ProductListName"];
             if (ModelState.IsValid) {
                 _context.Add(products.NewProduct);
                 await _context.SaveChangesAsync();
-                return View(new Products(new Product(), await _context.Products.ToListAsync()));
+
+                return View(new Products(productListName, new Product(), await GetProducts(listId)));
             }
-            products.ProductList = await _context.Products.ToListAsync();
-            Console.WriteLine(JsonSerializer.Serialize(products));
+            products.ProductList = await GetProducts(listId);
+            products.ListName = productListName;
             return View(products);
         }
 
         [HttpGet]
         public async Task<IActionResult> Details(int? id) {
-            if (id == null) {
-                return NotFound();
-            }
+            if (id == null) {  return NotFound(); }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (product == null) {
-                return NotFound();
-            }
+            if (product == null) { return NotFound(); }
 
             return View(product);
         }
@@ -76,22 +95,38 @@ namespace ProductListApp.Controllers {
         [HttpGet]
         public async Task<IActionResult> Edit(int? id) {
             if (id == null) {
-                return NotFound();
+                if (TempData["EditProductId"] is int tempId) {
+                    id = tempId;
+                    TempData.Keep("EditProductId");
+                }
+                else {
+                    return NotFound();
+                }
             }
 
             var product = await _context.Products.FindAsync(id);
-            if (product == null) {
-                return NotFound();
-            }
+            Console.WriteLine(JsonSerializer.Serialize(product));
+
+            if (product == null) { return NotFound(); }
+
+            TempData["EditProductId"] = id;
+            TempData["EditProductListId"] = product.ProductListId;
+
             return View(product);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,Quantity")] Product product) {
+        public async Task<IActionResult> Edit(int id, Product product) {
             if (id != product.Id) {
                 return NotFound();
             }
+
+            if (TempData["EditProductListId"] is not int editListId) {
+                return NotFound();
+            }
+
+            product.ProductListId = editListId;
 
             if (ModelState.IsValid) {
                 try {
@@ -114,15 +149,20 @@ namespace ProductListApp.Controllers {
         [HttpGet]
         public async Task<IActionResult> Delete(int? id) {
             if (id == null) {
-                return NotFound();
+                if (TempData["DeleteProductId"] is int tempId) {
+                    id = tempId;
+                    TempData.Keep("DeleteProductId");
+                }
+                else {
+                    return NotFound();
+                }
             }
 
-            var product = await _context.Products
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (product == null) {
-                return NotFound();
-            }
+            if (product == null) { return NotFound(); }
+
+            TempData["DeleteProductId"] = id;
 
             return View(product);
         }
@@ -139,8 +179,22 @@ namespace ProductListApp.Controllers {
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateCheckbox(int id, bool isChecked) {
+            var item = await _context.Products.FindAsync(id);
+            if (item != null) {
+                item.Status = isChecked;
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
         private bool ProductExists(int id) {
             return _context.Products.Any(e => e.Id == id);
+        }
+
+        private async Task<IEnumerable<Product>> GetProducts(int? listID) {
+            return await _context.Products.Where(o => o.ProductListId == listID).ToListAsync();
         }
     }
 }

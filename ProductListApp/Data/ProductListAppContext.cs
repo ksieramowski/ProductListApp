@@ -17,6 +17,6 @@ namespace ProductListApp.Data
         }
 
         public DbSet<Product> Products { get; set; } = default!;
-        public DbSet<Product> ProductLists { get; set; } = default!;
+        public DbSet<ProductList> ProductLists { get; set; } = default!;
     }
 }
