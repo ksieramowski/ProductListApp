@@ -21,21 +21,21 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <label asp-for="NewProduct.Name" class="control-label"></label>
-            <input id="input-product-name" asp-for="NewProduct.Name" class="form-control" />
+            <input id="pla-products-new-name" asp-for="NewProduct.Name" class="form-control" />
             <span asp-validation-for="NewProduct.Name" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="NewProduct.Price" class="control-label"></label>
-            <input id="input-product-price" asp-for="NewProduct.Price" class="form-control" />
+            <input id="pla-products-new-price" asp-for="NewProduct.Price" class="form-control" />
             <span asp-validation-for="NewProduct.Price" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="NewProduct.Quantity" class="control-label"></label>
-            <input id="input-product-quantity" asp-for="NewProduct.Quantity" class="form-control" />
+            <input id="pla-products-new-quantity" asp-for="NewProduct.Quantity" class="form-control" />
             <span asp-validation-for="NewProduct.Quantity" class="text-danger"></span>
         </div>
         <div class="form-group" style="margin: 25px 0px">
-            <input id="button-add-product" type="submit" value="@Localizer["Add"]" class="btn btn-primary" />
+            <input id="pla-products-new-submit" type="submit" value="@Localizer["Add"]" class="btn btn-primary" />
         </div>
     </form>
 
@@ -60,7 +60,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody id="tbody-product-list">
+            <tbody id="pla-products-tbody">
                 @foreach (var item in Model.ProductList) {
                     <tr>
                         <td class="align-middle" style="word-break: break-word">

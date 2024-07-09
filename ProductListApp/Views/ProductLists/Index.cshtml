@@ -16,11 +16,11 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <label asp-for="NewProductList.Name" class="control-label"></label>
-            <input id="input-product-name" asp-for="NewProductList.Name" class="form-control" />
+            <input id="pla-productlists-new-name" asp-for="NewProductList.Name" class="form-control" />
             <span asp-validation-for="NewProductList.Name" class="text-danger"></span>
         </div>
         <div class="form-group" style="margin: 25px 0px;">
-            <input id="button-add-product" type="submit" value="@Localizer["Create"]" class="btn btn-primary" />
+            <input id="pla-productlists-new-submit" type="submit" value="@Localizer["Create"]" class="btn btn-primary" />
         </div>
     </form>
     @if (Model.ListOfProductLists.Count() > 0) {
@@ -41,10 +41,10 @@
                     </th>
                 </tr>
             </thead>
-            <tbody id="tbody-product-list-list">
+            <tbody id="pla-productlists-tbody">
                 @foreach (var item in Model.ListOfProductLists) {
                     <tr>
-                        <td class="align-middle" style="word-break: break-word">
+                        <td class="align-middle pla-productlists-col-1" style="word-break: break-word">
                             @Html.ActionLink(item.Name, "Index", "Products", new { listId = item.Id, listName = item.Name }, null)
                         </td>
                         <td class="align-middle">
