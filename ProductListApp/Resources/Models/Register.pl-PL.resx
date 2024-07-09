@@ -124,9 +124,21 @@
     <value>Email</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nazwa</value>
+    <value>Nazwa użytkownika</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Hasło</value>
+  </data>
+  <data name="RequireConfirmPassword" xml:space="preserve">
+    <value>Potwierdzenie hasła jest wymagane.</value>
+  </data>
+  <data name="RequireEmail" xml:space="preserve">
+    <value>Email jest wymagany.</value>
+  </data>
+  <data name="RequireName" xml:space="preserve">
+    <value>Nazwa użytkownika jest wymagana.</value>
+  </data>
+  <data name="RequirePassword" xml:space="preserve">
+    <value>Hasło jest wymagane.</value>
   </data>
 </root>

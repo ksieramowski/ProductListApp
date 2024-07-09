@@ -20,7 +20,7 @@ namespace ProductListApp.Controllers {
         [HttpPost]
         public async Task<IActionResult> Register(Register registerData) {
             if (ModelState.IsValid) {
-                var user = new User { UserName = registerData.Email, Email = registerData.Email };
+                var user = new User { Nickname = registerData.Name, UserName = registerData.Email, Email = registerData.Email };
                 var result = await _userManager.CreateAsync(user, registerData.Password);
                 if (result.Succeeded) {
                     await _signInManager.SignInAsync(user, isPersistent: false);

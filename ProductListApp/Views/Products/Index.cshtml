@@ -39,54 +39,58 @@
         </div>
     </form>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th style="min-width: 125px">
-                    @Html.DisplayNameFor(model => model.NewProduct.Name)
-                </th>
-                <th style="width:15%">
-                    @Html.DisplayNameFor(model => model.NewProduct.Price)
-                </th>
-                <th style="width:15%">
-                    @Html.DisplayNameFor(model => model.NewProduct.Quantity)
-                </th>
-                <th style="width:15%">
-                    @Html.DisplayNameFor(model => model.NewProduct.Status)
-                </th>
-                <th>
-                    @Localizer["Actions"]
-                </th>
-            </tr>
-        </thead>
-        <tbody id="tbody-product-list">
-            @foreach (var item in Model.ProductList) {
+    @if (Model.ProductList.Count() > 0) {
+        <table class="table table-striped table-bordered">
+            <thead>
                 <tr>
-                    <td style="word-break: break-word">
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Quantity)
-                    </td>
-                    <td>
-                        <input type="checkbox" @(item.Status ? "checked" : "") data-id="@item.Id" class="update-checkbox" />
-                    </td>
-                    <td class="fit-content">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn-link" style="text-decoration: none">
-                            <button class="btn btn-primary">@Localizer["Edit"]</button>
-                        </a>
-
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn-link" style="text-decoration: none">
-                            <button class="btn btn-danger">@Localizer["Delete"]</button>
-                        </a>
-                    </td>
+                    <th class="col">
+                        @Html.DisplayNameFor(model => model.NewProduct.Name)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.NewProduct.Price)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.NewProduct.Quantity)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.NewProduct.Status)
+                    </th>
+                    <th class="col-2">
+                        @Localizer["Actions"]
+                    </th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody id="tbody-product-list">
+                @foreach (var item in Model.ProductList) {
+                    <tr>
+                        <td class="align-middle" style="word-break: break-word">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td class="align-middle">
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td class="align-middle">
+                            <input class="align-middle update-checkbox" type="checkbox" @(item.Status ? "checked" : "") data-id="@item.Id" />
+                        </td>
+                        <td class="align-middle">
+                            <div style="display: flex; justify-content: space-evenly; align-items: center;">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                                    @Localizer["Edit"]
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                    @Localizer["Delete"]
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
 </div>
 
 

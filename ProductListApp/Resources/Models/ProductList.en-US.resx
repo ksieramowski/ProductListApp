@@ -121,7 +121,7 @@
     <value>Creation time</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>List name</value>
   </data>
   <data name="RequireName" xml:space="preserve">
     <value>Field name is required.</value>

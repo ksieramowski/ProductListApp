@@ -126,4 +126,10 @@
   <data name="Remember me" xml:space="preserve">
     <value>Remeber me</value>
   </data>
+  <data name="RequireEmail" xml:space="preserve">
+    <value>Email is required.</value>
+  </data>
+  <data name="RequirePassword" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
 </root>

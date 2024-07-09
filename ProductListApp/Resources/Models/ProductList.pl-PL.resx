@@ -121,7 +121,7 @@
     <value>Czas utworzenia</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nazwa</value>
+    <value>Nazwa listy</value>
   </data>
   <data name="RequireName" xml:space="preserve">
     <value>Pole nazwa jest wymagane.</value>

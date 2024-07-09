@@ -56,3 +56,25 @@ body {
     white-space: nowrap;
     width: 1%;
 }
+
+.center-v {
+    display: flex;
+    justify-content: center;
+}
+
+.center-h {
+    display: flex;
+    align-items: center;
+}
+
+.pla-bg-main {
+    background-color: #343436;
+}
+
+.pla-bg-nav {
+    background-color: #242426;
+}
+
+.pla-fg-light {
+    color: #EEEEEE;
+}

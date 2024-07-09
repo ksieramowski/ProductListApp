@@ -41,6 +41,7 @@ namespace ProductListApp.Controllers {
 
         [HttpPost]
         public async Task<IActionResult> Index(Products products) {
+            products.NewProduct.Name = products.NewProduct.Name?.Trim();
             TempData.Keep("ProductListId");
             TempData.Keep("ProductListName");
 

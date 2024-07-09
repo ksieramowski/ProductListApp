@@ -2,12 +2,12 @@
 
 namespace ProductListApp.Models {
     public class Login {
-        [Required]
+        [Required(ErrorMessage = "RequireEmail")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string? Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "RequirePassword")]
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 6)]
         [Display(Name = "Password")]

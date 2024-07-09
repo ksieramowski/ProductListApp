@@ -2,14 +2,16 @@
 
 @inject IViewLocalizer Localizer
 
+@inject Microsoft.AspNetCore.Identity.UserManager<ProductListApp.Models.User> UserManager
+@inject Microsoft.AspNetCore.Identity.SignInManager<ProductListApp.Models.User> SignInManager
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">@Localizer["Welcome"]</h1>
-    <p>
+    <h1>@Localizer["Welcome"]@if (User.Identity?.IsAuthenticated == true){<span>, @((await UserManager.GetUserAsync(User))?.Nickname)</span>}!</h1>
+    <p class="text-light">
         <a class="nav-link" asp-area="" asp-controller="ProductLists" asp-action="Index">@Localizer["CreateYourProductList"]</a>
     </p>
 </div>

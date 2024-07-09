@@ -1,6 +1,5 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 
-@inject IViewLocalizer Localizer
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +26,11 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="ProductLists" asp-action="Index">@Localizer["Products"]</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav navbar-right flex-grow-1">
-                        <li>
+                    <ul class="navbar-nav navbar-left flex-grow-1">
+                        <li class="align-middle">
                             @await Html.PartialAsync("_SelectLanguage")
                         </li>
-                        @if (User.Identity.IsAuthenticated == false) {
+                        @if (User.Identity?.IsAuthenticated == false) {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">@Localizer["Register"]</a>
                             </li>
@@ -40,10 +39,7 @@
                             </li>
                         }
                         else {
-                            <li class="nav-item navbar-right">
-                                <span class="nav-link text-dark">@Localizer["Welcome"], @User.Identity.Name!</span>
-                            </li>
-                            <li class="nav-item navbar-right">
+                            <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@Localizer["Logout"]</a>
                             </li>
                         }
