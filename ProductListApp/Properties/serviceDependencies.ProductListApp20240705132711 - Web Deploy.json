@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ProductListApp20240705132711/providers/Microsoft.ServiceLinker/linkers/ConnectionStrings_C4F3C8D166",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/productlistapp-1dbserver/databases/ProductListApp_1db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings"
+    }
+  }
+}
