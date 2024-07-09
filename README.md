@@ -1,1 +1,1 @@
-https://productlistapp20240701174222.azurewebsites.net/
+https://productlistapp20240705132711.azurewebsites.net/
