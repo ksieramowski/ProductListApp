@@ -17,11 +17,11 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" id="pla-edit-productlist-name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary margin-vert-25" />
+                <input id="pla-edit-productlist-submit" type="submit" value="@Localizer["Save"]" class="btn btn-primary margin-vert-25" />
             </div>
         </form>
     </div>

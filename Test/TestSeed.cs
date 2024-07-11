@@ -12,6 +12,8 @@ namespace Test {
             Value = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
         }
 
-
+        public override string ToString() {
+            return Value.ToString();
+        }
     }
 }

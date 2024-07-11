@@ -22,7 +22,7 @@
 
     <form asp-action="DeleteConfirmed">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" style="margin-bottom: 25px"/>
+        <input id="pla-delete-productlist-submit" type="submit" value="Delete" class="btn btn-danger" style="margin-bottom: 25px"/>
         <br />
         <a asp-action="Index">@Localizer["BackToList"]</a>
     </form>
