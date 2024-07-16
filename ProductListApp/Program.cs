@@ -12,8 +12,15 @@ namespace ProductListApp {
         public static void Main(string[] args) {
             var builder = WebApplication.CreateBuilder(args);
 
+            //var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+            //var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+            //var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+            //var connectionString = $"Data Source ={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword};TrustServerCertificate=True";
+
+
             builder.Services.AddDbContext<ProductListAppContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ProductListAppContext") ?? throw new InvalidOperationException("Connection string 'ProductListAppContext' not found.")));
+
 
             builder.Services.AddIdentity<User, IdentityRole>(options => {
                     options.Password.RequireDigit = false;
@@ -76,6 +83,23 @@ namespace ProductListApp {
                 pattern: "{controller=Home}/{action=Index}/{ui-culture?}");
 
             app.UseRequestLocalization();
+
+            // force database migrtation on startup
+            // required for docker database container
+            try {
+                using (var scope = app.Services.CreateScope()) {
+                    var services = scope.ServiceProvider;
+
+                    var context = services.GetRequiredService<ProductListAppContext>();
+                    if (context.Database.GetPendingMigrations().Any()) {
+                        context.Database.Migrate();
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+
 
             app.Run();
         }

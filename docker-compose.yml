@@ -1,0 +1,32 @@
+version: '3.4'
+
+networks:
+  productlistapp-network:
+
+services:
+  productlistapp-db:
+    container_name: app-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=P@ssword123
+    networks:
+      - productlistapp-network
+  productlistapp:
+    container_name: app
+    image: ${DOCKER_REGISTRY-}productlistapp
+    build:
+      context: .
+      dockerfile: ProductListApp/Dockerfile
+    ports:
+      - 8001:80
+    depends_on:
+      - productlistapp-db
+    environment:
+      - DB_HOST=productlistapp-db
+      - DB_NAME=ProductListApp
+      - DB_SA_PASSWORD=P@ssword123
+    networks:
+      - productlistapp-network
