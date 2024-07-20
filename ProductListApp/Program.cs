@@ -7,19 +7,15 @@ using NUnit.Framework;
 using ProductListApp.Data;
 using ProductListApp.Models;
 using System.Globalization;
+
 namespace ProductListApp {
     public class Program {
         public static void Main(string[] args) {
             var builder = WebApplication.CreateBuilder(args);
 
-            //var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
-            //var dbName = Environment.GetEnvironmentVariable("DB_NAME");
-            //var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
-            //var connectionString = $"Data Source ={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword};TrustServerCertificate=True";
-
-
             builder.Services.AddDbContext<ProductListAppContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ProductListAppContext") ?? throw new InvalidOperationException("Connection string 'ProductListAppContext' not found.")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ProductListAppContext")
+                    ?? throw new InvalidOperationException("Connection string 'ProductListAppContext' not found.")));
 
 
             builder.Services.AddIdentity<User, IdentityRole>(options => {
@@ -99,7 +95,6 @@ namespace ProductListApp {
             catch (Exception ex) {
                 Console.WriteLine(ex.Message);
             }
-
 
             app.Run();
         }
