@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['down_0',['Down',['../class_product_list_app_1_1_migrations_1_1_initial_create.html#aae0ce00095829d293350906439559fca',1,'ProductListApp::Migrations::InitialCreate']]]
+  ['buildtargetmodel_0',['BuildTargetModel',['../class_product_list_app_1_1_migrations_1_1_initial_create.html#a37da122697edec2e9e5aa0acf8c83fc6',1,'ProductListApp::Migrations::InitialCreate']]]
 ];

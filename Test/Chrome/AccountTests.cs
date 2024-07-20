@@ -6,15 +6,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Test.Chrome {
+    /// <summary>
+    /// Main test class using NUnit and Selenium.
+    /// </summary>
     public partial class Tests {
 
-
+        /// <summary>
+        /// Reister test with auto-generated seed
+        /// </summary>
         [Test]
         public void Register() {
             TestSeed seed = new();
             Register(seed);
         }
 
+        /// <summary>
+        /// Register test with given seed.
+        /// Registers new user with valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void Register(TestSeed seed) {
             Logout();
 
@@ -53,12 +63,20 @@ namespace Test.Chrome {
 
         }
 
+        /// <summary>
+        /// Login test with auto-generated seed.
+        /// </summary>
         [Test]
         public void Login() {
             TestSeed seed = new();
             Login(seed);
         }
 
+        /// <summary>
+        /// Login test with given seed.
+        /// Logs in new user with valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void Login(TestSeed seed) {
             Register(seed);
             Logout();
@@ -89,6 +107,10 @@ namespace Test.Chrome {
             Assert.That(Driver.Url, Is.EqualTo(Root));
         }
 
+        /// <summary>
+        /// Logout test.
+        /// Checks if login and register buttons are present if user is not logged in.
+        /// </summary>
         [Test]
         public void Logout() {
             Driver.Navigate().GoToUrl(Root);

@@ -4,31 +4,26 @@ using System.Collections.ObjectModel;
 using NUnit.Framework.Interfaces;
 
 namespace Test.Chrome {
+    /// <summary>
+    /// Main test class using NUnit and Selenium.
+    /// </summary>
     public partial class Tests {
 
-        private static string Root;
-        private static ChromeDriver Driver;
-
-
-        [SetUp]
-        public void Setup() {
-            Root = @"https://localhost:7051/"; // local test
-
-            Driver = new ChromeDriver();
-        }
-
-        [TearDown]
-        public void TearDown() {
-            Driver.Close();
-            Driver.Dispose();
-        }
-
+        /// <summary>
+        /// Product list test with auto-generated seed.
+        /// Creates new user, logs in and creates new product list using valid field values.
+        /// </summary>
         [Test]
         public void CreateProductList() {
             TestSeed seed = new();
             CreateProductList(seed);
         }
 
+        /// <summary>
+        /// Product list test with given seed.
+        /// Creates new user, logs in and creates new product list using valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void CreateProductList(TestSeed seed) {
             Login(seed);
 
@@ -72,12 +67,21 @@ namespace Test.Chrome {
             Assert.That(lists.Count(), Is.GreaterThan(count));
         }
 
+        /// <summary>
+        /// Edit product list test with auto-generated seed.
+        /// Creates new user, logs in, creates new product list and edits the product list modifying fields using valid values.
+        /// </summary>
         [Test]
         public void EditProductList() {
             TestSeed seed = new();
             EditProductList(seed);
         }
 
+        /// <summary>
+        /// Edit product list test with auto-generated seed.
+        /// Creates new user, logs in, creates new product list and edits the product list modifying fields using valid values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void EditProductList(TestSeed seed) {
             CreateProductList(seed);
 
@@ -121,12 +125,21 @@ namespace Test.Chrome {
             Assert.That(found);
         }
 
+        /// <summary>
+        /// Delete product list test with auto-generated seed.
+        /// Creates new user, logs in, creates new product list and deletes the product list using valid field values.
+        /// </summary>
         [Test]
         public void DeleteProductList() {
             TestSeed seed = new();
             DeleteProductList(seed);
         }
 
+        /// <summary>
+        /// Delete product list test with given seed.
+        /// Creates new user, logs in, creates new product list and deletes the product list using valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void DeleteProductList(TestSeed seed) {
             CreateProductList(seed);
 
@@ -158,12 +171,21 @@ namespace Test.Chrome {
             Assert.That(Utility.FindText(tbody, $"{seed}"));
         }
 
+        /// <summary>
+        /// Add product test with auto-generated seed
+        /// Creates new user, logs in, creates new product list and adds new product to the list using valid field values.
+        /// </summary>
         [Test]
         public void AddProduct() {
             TestSeed seed = new();
             AddProduct(seed);
         }
 
+        /// <summary>
+        /// Add product test with given seed
+        /// Creates new user, logs in, creates new product list and adds new product to the list using valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void AddProduct(TestSeed seed) {
             CreateProductList(seed);
 
@@ -215,12 +237,22 @@ namespace Test.Chrome {
 
         }
 
+        /// <summary>
+        /// Edit product test with auto-generated seed.
+        /// Creates new user, logs in, creates new product list, adds product and edits this product using valid field values.
+        /// </summary>
         [Test]
         public void EditProduct() {
             TestSeed seed = new();
             EditProduct(seed);
         }
 
+
+        /// <summary>
+        /// Edit product test with given seed.
+        /// Creates new user, logs in, creates new product list, adds product and edits this product using valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void EditProduct(TestSeed seed) {
             AddProduct(seed);
 
@@ -262,12 +294,21 @@ namespace Test.Chrome {
             Assert.That(Utility.FindText(tbody, quantity));
         }
 
+        /// <summary>
+        /// Delete product test with auto-generated seed.
+        /// Creates new user, logs in, creates product list, adds new product and deletes the product using valid field values.
+        /// </summary>
         [Test]
         public void DeleteProduct() {
             TestSeed seed = new();
             DeleteProduct(seed);
         }
 
+        /// <summary>
+        /// Delete product test with given seed.
+        /// Creates new user, logs in, creates product list, adds new product and deletes the product using valid field values.
+        /// </summary>
+        /// <param name="seed">Used to define values sent to application.</param>
         public void DeleteProduct(TestSeed seed) {
             AddProduct(seed);
 

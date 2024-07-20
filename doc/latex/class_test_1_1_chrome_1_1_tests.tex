@@ -1,65 +1,188 @@
 \doxysection{Test.\+Chrome.\+Tests Class Reference}
 \hypertarget{class_test_1_1_chrome_1_1_tests}{}\label{class_test_1_1_chrome_1_1_tests}\index{Test.Chrome.Tests@{Test.Chrome.Tests}}
+
+
+Main test class using NUnit and Selenium.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_a1b544368a51eace7a9aa78e9840c9a7e}\label{class_test_1_1_chrome_1_1_tests_a1b544368a51eace7a9aa78e9840c9a7e} 
 void {\bfseries Register} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a612499d136132b4fdd8caa2d760890ef}\label{class_test_1_1_chrome_1_1_tests_a612499d136132b4fdd8caa2d760890ef} 
-void {\bfseries Register} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Reister test with auto-\/generated seed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a612499d136132b4fdd8caa2d760890ef}{Register}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Register test with given seed. Registers new user with valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_ae6fa6ad243fe78defb08ede2aa0096d7}\label{class_test_1_1_chrome_1_1_tests_ae6fa6ad243fe78defb08ede2aa0096d7} 
 void {\bfseries Login} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a3da3e64902aaefaa24b22d2cd06e1f9b}\label{class_test_1_1_chrome_1_1_tests_a3da3e64902aaefaa24b22d2cd06e1f9b} 
-void {\bfseries Login} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Login test with auto-\/generated seed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a3da3e64902aaefaa24b22d2cd06e1f9b}{Login}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Login test with given seed. Logs in new user with valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_a34f2a8c0de8ead06044140dc018830e9}\label{class_test_1_1_chrome_1_1_tests_a34f2a8c0de8ead06044140dc018830e9} 
 void {\bfseries Logout} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a655f1e49f6cfddc59ce23bbf9b3e06b5}\label{class_test_1_1_chrome_1_1_tests_a655f1e49f6cfddc59ce23bbf9b3e06b5} 
-void {\bfseries Setup} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a1d3244898fcb560bf80dc39359571c48}\label{class_test_1_1_chrome_1_1_tests_a1d3244898fcb560bf80dc39359571c48} 
-void {\bfseries Tear\+Down} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Logout test. Checks if login and register buttons are present if user is not logged in. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_ae279e48da0aa5125d09fba7819a6a814}\label{class_test_1_1_chrome_1_1_tests_ae279e48da0aa5125d09fba7819a6a814} 
 void {\bfseries Create\+Product\+List} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_ae0bce2e729f98d977968733b606ed837}\label{class_test_1_1_chrome_1_1_tests_ae0bce2e729f98d977968733b606ed837} 
-void {\bfseries Create\+Product\+List} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Product list test with auto-\/generated seed. Creates new user, logs in and creates new product list using valid field values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_ae0bce2e729f98d977968733b606ed837}{Create\+Product\+List}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Product list test with given seed. Creates new user, logs in and creates new product list using valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_a6b89486e5ca81b5dc5ba35d9a047182e}\label{class_test_1_1_chrome_1_1_tests_a6b89486e5ca81b5dc5ba35d9a047182e} 
 void {\bfseries Edit\+Product\+List} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a7cc20d77b883346fa77da1fef3fc6c80}\label{class_test_1_1_chrome_1_1_tests_a7cc20d77b883346fa77da1fef3fc6c80} 
-void {\bfseries Edit\+Product\+List} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Edit product list test with auto-\/generated seed. Creates new user, logs in, creates new product list and edits the product list modifying fields using valid values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a7cc20d77b883346fa77da1fef3fc6c80}{Edit\+Product\+List}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Edit product list test with auto-\/generated seed. Creates new user, logs in, creates new product list and edits the product list modifying fields using valid values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_ae55f8ddab50225a49ab462c09fdbfdef}\label{class_test_1_1_chrome_1_1_tests_ae55f8ddab50225a49ab462c09fdbfdef} 
 void {\bfseries Delete\+Product\+List} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_aa9124f9b3fd3fe7268a96edb91ded317}\label{class_test_1_1_chrome_1_1_tests_aa9124f9b3fd3fe7268a96edb91ded317} 
-void {\bfseries Delete\+Product\+List} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Delete product list test with auto-\/generated seed. Creates new user, logs in, creates new product list and deletes the product list using valid field values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_aa9124f9b3fd3fe7268a96edb91ded317}{Delete\+Product\+List}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Delete product list test with given seed. Creates new user, logs in, creates new product list and deletes the product list using valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_a1e9d522f24969f3a78c52197a2601698}\label{class_test_1_1_chrome_1_1_tests_a1e9d522f24969f3a78c52197a2601698} 
 void {\bfseries Add\+Product} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a9259f3eff79719601ecdd538b517a26f}\label{class_test_1_1_chrome_1_1_tests_a9259f3eff79719601ecdd538b517a26f} 
-void {\bfseries Add\+Product} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Add product test with auto-\/generated seed Creates new user, logs in, creates new product list and adds new product to the list using valid field values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a9259f3eff79719601ecdd538b517a26f}{Add\+Product}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Add product test with given seed Creates new user, logs in, creates new product list and adds new product to the list using valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_ac4305839aabe2597cc4a9a984f2e8b5c}\label{class_test_1_1_chrome_1_1_tests_ac4305839aabe2597cc4a9a984f2e8b5c} 
 void {\bfseries Edit\+Product} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a63e10df4c044d5cbe58d5c3a78a669dc}\label{class_test_1_1_chrome_1_1_tests_a63e10df4c044d5cbe58d5c3a78a669dc} 
-void {\bfseries Edit\+Product} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\item 
+\begin{DoxyCompactList}\small\item\em Edit product test with auto-\/generated seed. Creates new user, logs in, creates new product list, adds product and edits this product using valid field values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a63e10df4c044d5cbe58d5c3a78a669dc}{Edit\+Product}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Edit product test with given seed. Creates new user, logs in, creates new product list, adds product and edits this product using valid field values. \end{DoxyCompactList}\item 
 \Hypertarget{class_test_1_1_chrome_1_1_tests_a077d59e46122c8de817a5306a457cda5}\label{class_test_1_1_chrome_1_1_tests_a077d59e46122c8de817a5306a457cda5} 
 void {\bfseries Delete\+Product} ()
-\item 
-\Hypertarget{class_test_1_1_chrome_1_1_tests_a62690a40b3ccf590decfef9d110b1fc9}\label{class_test_1_1_chrome_1_1_tests_a62690a40b3ccf590decfef9d110b1fc9} 
-void {\bfseries Delete\+Product} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Delete product test with auto-\/generated seed. Creates new user, logs in, creates product list, adds new product and deletes the product using valid field values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_test_1_1_chrome_1_1_tests_a62690a40b3ccf590decfef9d110b1fc9}{Delete\+Product}} (\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}} seed)
+\begin{DoxyCompactList}\small\item\em Delete product test with given seed. Creates new user, logs in, creates product list, adds new product and deletes the product using valid field values. \end{DoxyCompactList}\item 
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a655f1e49f6cfddc59ce23bbf9b3e06b5}\label{class_test_1_1_chrome_1_1_tests_a655f1e49f6cfddc59ce23bbf9b3e06b5} 
+void {\bfseries Setup} ()
+\begin{DoxyCompactList}\small\item\em Sets up website\textquotesingle{}s root path and initializes web driver. \end{DoxyCompactList}\item 
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a1d3244898fcb560bf80dc39359571c48}\label{class_test_1_1_chrome_1_1_tests_a1d3244898fcb560bf80dc39359571c48} 
+void {\bfseries Tear\+Down} ()
+\begin{DoxyCompactList}\small\item\em Cleans after web driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main test class using NUnit and Selenium. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a9259f3eff79719601ecdd538b517a26f}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{AddProduct()}{AddProduct()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a9259f3eff79719601ecdd538b517a26f} 
+void Test.\+Chrome.\+Tests.\+Add\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Add product test with given seed Creates new user, logs in, creates new product list and adds new product to the list using valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_ae0bce2e729f98d977968733b606ed837}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!CreateProductList@{CreateProductList}}
+\index{CreateProductList@{CreateProductList}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{CreateProductList()}{CreateProductList()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_ae0bce2e729f98d977968733b606ed837} 
+void Test.\+Chrome.\+Tests.\+Create\+Product\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Product list test with given seed. Creates new user, logs in and creates new product list using valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a62690a40b3ccf590decfef9d110b1fc9}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!DeleteProduct@{DeleteProduct}}
+\index{DeleteProduct@{DeleteProduct}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{DeleteProduct()}{DeleteProduct()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a62690a40b3ccf590decfef9d110b1fc9} 
+void Test.\+Chrome.\+Tests.\+Delete\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Delete product test with given seed. Creates new user, logs in, creates product list, adds new product and deletes the product using valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_aa9124f9b3fd3fe7268a96edb91ded317}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!DeleteProductList@{DeleteProductList}}
+\index{DeleteProductList@{DeleteProductList}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{DeleteProductList()}{DeleteProductList()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_aa9124f9b3fd3fe7268a96edb91ded317} 
+void Test.\+Chrome.\+Tests.\+Delete\+Product\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Delete product list test with given seed. Creates new user, logs in, creates new product list and deletes the product list using valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a63e10df4c044d5cbe58d5c3a78a669dc}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!EditProduct@{EditProduct}}
+\index{EditProduct@{EditProduct}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{EditProduct()}{EditProduct()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a63e10df4c044d5cbe58d5c3a78a669dc} 
+void Test.\+Chrome.\+Tests.\+Edit\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Edit product test with given seed. Creates new user, logs in, creates new product list, adds product and edits this product using valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a7cc20d77b883346fa77da1fef3fc6c80}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!EditProductList@{EditProductList}}
+\index{EditProductList@{EditProductList}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{EditProductList()}{EditProductList()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a7cc20d77b883346fa77da1fef3fc6c80} 
+void Test.\+Chrome.\+Tests.\+Edit\+Product\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Edit product list test with auto-\/generated seed. Creates new user, logs in, creates new product list and edits the product list modifying fields using valid values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a3da3e64902aaefaa24b22d2cd06e1f9b}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!Login@{Login}}
+\index{Login@{Login}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a3da3e64902aaefaa24b22d2cd06e1f9b} 
+void Test.\+Chrome.\+Tests.\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Login test with given seed. Logs in new user with valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_test_1_1_chrome_1_1_tests_a612499d136132b4fdd8caa2d760890ef}\index{Test.Chrome.Tests@{Test.Chrome.Tests}!Register@{Register}}
+\index{Register@{Register}!Test.Chrome.Tests@{Test.Chrome.Tests}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{class_test_1_1_chrome_1_1_tests_a612499d136132b4fdd8caa2d760890ef} 
+void Test.\+Chrome.\+Tests.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_test_1_1_test_seed}{Test\+Seed}}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Register test with given seed. Registers new user with valid field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Used to define values sent to application.\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
