@@ -1,5 +1,10 @@
 \doxysection{Product\+List\+App.\+Controllers.\+Account\+Controller Class Reference}
 \hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller}{}\label{class_product_list_app_1_1_controllers_1_1_account_controller}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+
+
+Controller class for managing user accounts.  
+
+
 Inheritance diagram for Product\+List\+App.\+Controllers.\+Account\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,21 +17,97 @@ Inheritance diagram for Product\+List\+App.\+Controllers.\+Account\+Controller\+
 \Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_adc728f96fba9365edad3c13e4a3fd762}\label{class_product_list_app_1_1_controllers_1_1_account_controller_adc728f96fba9365edad3c13e4a3fd762} 
 {\bfseries Account\+Controller} (User\+Manager$<$ \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_user}{User}} $>$ user\+Manager, Sign\+In\+Manager$<$ \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_user}{User}} $>$ sign\+In\+Manager)
 \item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_a3d245391f02a619d7f50792081bfdc40}\label{class_product_list_app_1_1_controllers_1_1_account_controller_a3d245391f02a619d7f50792081bfdc40} 
-IAction\+Result {\bfseries Register} ()
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_ad7f581ff54139c90d43e520dc86152d6}\label{class_product_list_app_1_1_controllers_1_1_account_controller_ad7f581ff54139c90d43e520dc86152d6} 
-async Task$<$ IAction\+Result $>$ {\bfseries Register} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_register}{Register}} register\+Data)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_aec16a1aefb4df08039781760f815acb4}\label{class_product_list_app_1_1_controllers_1_1_account_controller_aec16a1aefb4df08039781760f815acb4} 
-IAction\+Result {\bfseries Login} ()
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_a676f4c15c0fc86df76ffaf3d679d6181}\label{class_product_list_app_1_1_controllers_1_1_account_controller_a676f4c15c0fc86df76ffaf3d679d6181} 
-async Task$<$ IAction\+Result $>$ {\bfseries Login} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_login}{Login}} login\+Data)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_aa3f0e6988c9b1e25671dd2eb943d10c5}\label{class_product_list_app_1_1_controllers_1_1_account_controller_aa3f0e6988c9b1e25671dd2eb943d10c5} 
-async Task$<$ IAction\+Result $>$ {\bfseries Logout} ()
-\end{DoxyCompactItemize}
+IAction\+Result \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_account_controller_a3d245391f02a619d7f50792081bfdc40}{Register}} ()
+\begin{DoxyCompactList}\small\item\em Returns registration view with empty fields. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_account_controller_ad7f581ff54139c90d43e520dc86152d6}{Register}} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_register}{Register}} register\+Data)
+\begin{DoxyCompactList}\small\item\em If registration data is correct, then create new user, log them in and redirect to main page. Otherwise displays errors for each invalid field in registration form. \end{DoxyCompactList}\item 
+IAction\+Result \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_account_controller_aec16a1aefb4df08039781760f815acb4}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Returns login view with empty fields. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_account_controller_a676f4c15c0fc86df76ffaf3d679d6181}{Login}} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_login}{Login}} login\+Data)
+\begin{DoxyCompactList}\small\item\em If login data is correct, then log the user in and redirect to main page. Otherwise displays errors for each invalid field in login form. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_account_controller_aa3f0e6988c9b1e25671dd2eb943d10c5}{Logout}} ()
+\begin{DoxyCompactList}\small\item\em Logs out current user and redirects to main page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller class for managing user accounts. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_aec16a1aefb4df08039781760f815acb4}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}!Login@{Login}}
+\index{Login@{Login}!ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_account_controller_aec16a1aefb4df08039781760f815acb4} 
+IAction\+Result Product\+List\+App.\+Controllers.\+Account\+Controller.\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns login view with empty fields. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_a676f4c15c0fc86df76ffaf3d679d6181}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}!Login@{Login}}
+\index{Login@{Login}!ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_account_controller_a676f4c15c0fc86df76ffaf3d679d6181} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Account\+Controller.\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_login}{Login}}}]{login\+Data}{}\end{DoxyParamCaption})}
+
+
+
+If login data is correct, then log the user in and redirect to main page. Otherwise displays errors for each invalid field in login form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login\+Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_aa3f0e6988c9b1e25671dd2eb943d10c5}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}!Logout@{Logout}}
+\index{Logout@{Logout}!ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Logout()}{Logout()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_account_controller_aa3f0e6988c9b1e25671dd2eb943d10c5} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Account\+Controller.\+Logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Logs out current user and redirects to main page. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_a3d245391f02a619d7f50792081bfdc40}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}!Register@{Register}}
+\index{Register@{Register}!ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_account_controller_a3d245391f02a619d7f50792081bfdc40} 
+IAction\+Result Product\+List\+App.\+Controllers.\+Account\+Controller.\+Register (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns registration view with empty fields. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_account_controller_ad7f581ff54139c90d43e520dc86152d6}\index{ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}!Register@{Register}}
+\index{Register@{Register}!ProductListApp.Controllers.AccountController@{ProductListApp.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_account_controller_ad7f581ff54139c90d43e520dc86152d6} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Account\+Controller.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_register}{Register}}}]{register\+Data}{}\end{DoxyParamCaption})}
+
+
+
+If registration data is correct, then create new user, log them in and redirect to main page. Otherwise displays errors for each invalid field in registration form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em register\+Data} & \doxylink{namespace_product_list_app_1_1_data}{Data} entered by user into the form\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

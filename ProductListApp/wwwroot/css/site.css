@@ -78,3 +78,13 @@ body {
 .pla-fg-light {
     color: #EEEEEE;
 }
+
+.gradient-bacground {
+    background:
+        linear-gradient(to bottom right, rgba(255, 0, 0, 0.2), white 20%) top left,
+        linear-gradient(to bottom left, rgba(0, 255, 0, 0.2), white 20%) top right,
+        linear-gradient(to top left, rgba(0, 0, 255, 0.2), white 20%) bottom right,
+        linear-gradient(to top right, rgba(255, 255, 0, 0.2), white 20%) bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}

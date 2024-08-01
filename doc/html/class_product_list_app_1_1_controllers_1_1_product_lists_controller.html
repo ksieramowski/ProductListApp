@@ -94,6 +94,9 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ProductListApp.Controllers.ProductListsController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller for list of product lists for each user.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ProductListApp.Controllers.ProductListsController:</div>
 <div class="dyncontent">
@@ -106,25 +109,183 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb6be843b87cc9f1429ea51524176a77" id="r_aeb6be843b87cc9f1429ea51524176a77"><td class="memItemLeft" align="right" valign="top"><a id="aeb6be843b87cc9f1429ea51524176a77" name="aeb6be843b87cc9f1429ea51524176a77"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ProductListsController</b> (<a class="el" href="class_product_list_app_1_1_data_1_1_product_list_app_context.html">ProductListAppContext</a> context, UserManager&lt; <a class="el" href="class_product_list_app_1_1_models_1_1_user.html">User</a> &gt; userManager, IHttpContextAccessor httpContextAccessor)</td></tr>
 <tr class="separator:aeb6be843b87cc9f1429ea51524176a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485434fec0a94709250816506ed92024" id="r_a485434fec0a94709250816506ed92024"><td class="memItemLeft" align="right" valign="top"><a id="a485434fec0a94709250816506ed92024" name="a485434fec0a94709250816506ed92024"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> ()</td></tr>
+<tr class="memitem:a485434fec0a94709250816506ed92024" id="r_a485434fec0a94709250816506ed92024"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a485434fec0a94709250816506ed92024">Index</a> ()</td></tr>
+<tr class="memdesc:a485434fec0a94709250816506ed92024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns product list view including form that enables user to create new product list and list of existing product lists.  <br /></td></tr>
 <tr class="separator:a485434fec0a94709250816506ed92024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6b14f1a26b2a96d74f55c1ba78ad69" id="r_abc6b14f1a26b2a96d74f55c1ba78ad69"><td class="memItemLeft" align="right" valign="top"><a id="abc6b14f1a26b2a96d74f55c1ba78ad69" name="abc6b14f1a26b2a96d74f55c1ba78ad69"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (<a class="el" href="class_product_list_app_1_1_models_1_1_product_lists.html">ProductLists</a> productLists)</td></tr>
+<tr class="memitem:abc6b14f1a26b2a96d74f55c1ba78ad69" id="r_abc6b14f1a26b2a96d74f55c1ba78ad69"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc6b14f1a26b2a96d74f55c1ba78ad69">Index</a> (<a class="el" href="class_product_list_app_1_1_models_1_1_product_lists.html">ProductLists</a> productLists)</td></tr>
+<tr class="memdesc:abc6b14f1a26b2a96d74f55c1ba78ad69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates new product list if all field values are valid. Otherwise displays error.  <br /></td></tr>
 <tr class="separator:abc6b14f1a26b2a96d74f55c1ba78ad69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb55696c1801ea0e78f7111ed14826a9" id="r_aeb55696c1801ea0e78f7111ed14826a9"><td class="memItemLeft" align="right" valign="top"><a id="aeb55696c1801ea0e78f7111ed14826a9" name="aeb55696c1801ea0e78f7111ed14826a9"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Edit</b> (int? id)</td></tr>
+<tr class="memitem:aeb55696c1801ea0e78f7111ed14826a9" id="r_aeb55696c1801ea0e78f7111ed14826a9"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb55696c1801ea0e78f7111ed14826a9">Edit</a> (int? id)</td></tr>
+<tr class="memdesc:aeb55696c1801ea0e78f7111ed14826a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects to view that allows editing of selected product list.  <br /></td></tr>
 <tr class="separator:aeb55696c1801ea0e78f7111ed14826a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a3b86de0201995cf474e29aa60bc584" id="r_a0a3b86de0201995cf474e29aa60bc584"><td class="memItemLeft" align="right" valign="top"><a id="a0a3b86de0201995cf474e29aa60bc584" name="a0a3b86de0201995cf474e29aa60bc584"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Edit</b> (int id, <a class="el" href="class_product_list_app_1_1_models_1_1_product_list.html">ProductList</a> productList)</td></tr>
+<tr class="memitem:a0a3b86de0201995cf474e29aa60bc584" id="r_a0a3b86de0201995cf474e29aa60bc584"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a3b86de0201995cf474e29aa60bc584">Edit</a> (int id, <a class="el" href="class_product_list_app_1_1_models_1_1_product_list.html">ProductList</a> productList)</td></tr>
+<tr class="memdesc:a0a3b86de0201995cf474e29aa60bc584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits edit of product list.  <br /></td></tr>
 <tr class="separator:a0a3b86de0201995cf474e29aa60bc584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f9aa007c1a5a67a2a9aebd79810408" id="r_a81f9aa007c1a5a67a2a9aebd79810408"><td class="memItemLeft" align="right" valign="top"><a id="a81f9aa007c1a5a67a2a9aebd79810408" name="a81f9aa007c1a5a67a2a9aebd79810408"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Delete</b> (int? id)</td></tr>
+<tr class="memitem:a81f9aa007c1a5a67a2a9aebd79810408" id="r_a81f9aa007c1a5a67a2a9aebd79810408"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f9aa007c1a5a67a2a9aebd79810408">Delete</a> (int? id)</td></tr>
+<tr class="memdesc:a81f9aa007c1a5a67a2a9aebd79810408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects to view that allows to delete selected product list.  <br /></td></tr>
 <tr class="separator:a81f9aa007c1a5a67a2a9aebd79810408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8407b7506319aff49661fba956b3ed23" id="r_a8407b7506319aff49661fba956b3ed23"><td class="memItemLeft" align="right" valign="top"><a id="a8407b7506319aff49661fba956b3ed23" name="a8407b7506319aff49661fba956b3ed23"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteConfirmed</b> (int id)</td></tr>
+<tr class="memitem:a8407b7506319aff49661fba956b3ed23" id="r_a8407b7506319aff49661fba956b3ed23"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8407b7506319aff49661fba956b3ed23">DeleteConfirmed</a> (int id)</td></tr>
+<tr class="memdesc:a8407b7506319aff49661fba956b3ed23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits deletion of selected product list.  <br /></td></tr>
 <tr class="separator:a8407b7506319aff49661fba956b3ed23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller for list of product lists for each user. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a81f9aa007c1a5a67a2a9aebd79810408" name="a81f9aa007c1a5a67a2a9aebd79810408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f9aa007c1a5a67a2a9aebd79810408">&#9670;&#160;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.Delete </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects to view that allows to delete selected product list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of selected product list</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a8407b7506319aff49661fba956b3ed23" name="a8407b7506319aff49661fba956b3ed23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8407b7506319aff49661fba956b3ed23">&#9670;&#160;</a></span>DeleteConfirmed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.DeleteConfirmed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submits deletion of selected product list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of selected product list</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0a3b86de0201995cf474e29aa60bc584" name="a0a3b86de0201995cf474e29aa60bc584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3b86de0201995cf474e29aa60bc584">&#9670;&#160;</a></span>Edit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.Edit </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_product_list.html">ProductList</a></td>          <td class="paramname"><span class="paramname"><em>productList</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submits edit of product list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of sleceted list of products</td></tr>
+    <tr><td class="paramname">productList</td><td>Selected list of products structure passed by form</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aeb55696c1801ea0e78f7111ed14826a9" name="aeb55696c1801ea0e78f7111ed14826a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb55696c1801ea0e78f7111ed14826a9">&#9670;&#160;</a></span>Edit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.Edit </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects to view that allows editing of selected product list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Id of selected product list.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a485434fec0a94709250816506ed92024" name="a485434fec0a94709250816506ed92024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485434fec0a94709250816506ed92024">&#9670;&#160;</a></span>Index() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.Index </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns product list view including form that enables user to create new product list and list of existing product lists. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abc6b14f1a26b2a96d74f55c1ba78ad69" name="abc6b14f1a26b2a96d74f55c1ba78ad69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6b14f1a26b2a96d74f55c1ba78ad69">&#9670;&#160;</a></span>Index() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductListsController.Index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_product_lists.html">ProductLists</a></td>          <td class="paramname"><span class="paramname"><em>productLists</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates new product list if all field values are valid. Otherwise displays error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">productLists</td><td>Product list structure passed from form</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Development/ProductListApp/ProductListApp/Controllers/<b>ProductListsController.cs</b></li>
 </ul>

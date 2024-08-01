@@ -1,5 +1,10 @@
 \doxysection{Product\+List\+App.\+Controllers.\+Products\+Controller Class Reference}
 \hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller}{}\label{class_product_list_app_1_1_controllers_1_1_products_controller}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+
+
+Controller for products in list.  
+
+
 Inheritance diagram for Product\+List\+App.\+Controllers.\+Products\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,30 +17,178 @@ Inheritance diagram for Product\+List\+App.\+Controllers.\+Products\+Controller\
 \Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_ae29866a9d58e5fbd8a658cffe84281b6}\label{class_product_list_app_1_1_controllers_1_1_products_controller_ae29866a9d58e5fbd8a658cffe84281b6} 
 {\bfseries Products\+Controller} (\mbox{\hyperlink{class_product_list_app_1_1_data_1_1_product_list_app_context}{Product\+List\+App\+Context}} context)
 \item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_adbf3c611c4c4124972cf121e603fb4ec}\label{class_product_list_app_1_1_controllers_1_1_products_controller_adbf3c611c4c4124972cf121e603fb4ec} 
-async Task$<$ IAction\+Result $>$ {\bfseries Index} (int? list\+Id, string? list\+Name)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a23a340a13ab9fbc830e9fb279dc6d87c}\label{class_product_list_app_1_1_controllers_1_1_products_controller_a23a340a13ab9fbc830e9fb279dc6d87c} 
-async Task$<$ IAction\+Result $>$ {\bfseries Index} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_products}{Products}} products)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_acfab82c8e9d7525f6a336f1c9f98715a}\label{class_product_list_app_1_1_controllers_1_1_products_controller_acfab82c8e9d7525f6a336f1c9f98715a} 
-async Task$<$ IAction\+Result $>$ {\bfseries Details} (int? id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a51849729ac0de760ec9f4e5878abc762}\label{class_product_list_app_1_1_controllers_1_1_products_controller_a51849729ac0de760ec9f4e5878abc762} 
-async Task$<$ IAction\+Result $>$ {\bfseries Edit} (int? id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a7767af51fbf54cf3c5e0d953f80aca50}\label{class_product_list_app_1_1_controllers_1_1_products_controller_a7767af51fbf54cf3c5e0d953f80aca50} 
-async Task$<$ IAction\+Result $>$ {\bfseries Edit} (int id, \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product}{Product}} product)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_ac30bb0dc51eecdc767897ab9bceac96f}\label{class_product_list_app_1_1_controllers_1_1_products_controller_ac30bb0dc51eecdc767897ab9bceac96f} 
-async Task$<$ IAction\+Result $>$ {\bfseries Delete} (int? id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a0e49d086b551af8e74068d74c6588f25}\label{class_product_list_app_1_1_controllers_1_1_products_controller_a0e49d086b551af8e74068d74c6588f25} 
-async Task$<$ IAction\+Result $>$ {\bfseries Delete\+Confirmed} (int id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_abcf60e9f7ed23e9b1342f0edc4342815}\label{class_product_list_app_1_1_controllers_1_1_products_controller_abcf60e9f7ed23e9b1342f0edc4342815} 
-async Task$<$ IAction\+Result $>$ {\bfseries Update\+Checkbox} (int id, bool is\+Checked)
-\end{DoxyCompactItemize}
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_adbf3c611c4c4124972cf121e603fb4ec}{Index}} (int? list\+Id, string? list\+Name)
+\begin{DoxyCompactList}\small\item\em Returns view with products in selected list. Also allows to add new products. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_a23a340a13ab9fbc830e9fb279dc6d87c}{Index}} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_products}{Products}} products)
+\begin{DoxyCompactList}\small\item\em If data provided by user in form is correct, adds new product to the list. Otherwise displays corresponding error message. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_acfab82c8e9d7525f6a336f1c9f98715a}{Details}} (int? id)
+\begin{DoxyCompactList}\small\item\em Displays details of selected product. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_a51849729ac0de760ec9f4e5878abc762}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em Redirects to view that allows to edit selected product. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_a7767af51fbf54cf3c5e0d953f80aca50}{Edit}} (int id, \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product}{Product}} product)
+\begin{DoxyCompactList}\small\item\em Submits edit of previously selected product. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_ac30bb0dc51eecdc767897ab9bceac96f}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em Redirects to page that allows to delete selected product. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_a0e49d086b551af8e74068d74c6588f25}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em Submits deletion of previously selected product. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_products_controller_abcf60e9f7ed23e9b1342f0edc4342815}{Update\+Checkbox}} (int id, bool is\+Checked)
+\begin{DoxyCompactList}\small\item\em Updates checkbox to given value that is corresponding to status field of product identified by ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller for products in list. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_ac30bb0dc51eecdc767897ab9bceac96f}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Delete@{Delete}}
+\index{Delete@{Delete}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_ac30bb0dc51eecdc767897ab9bceac96f} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Redirects to page that allows to delete selected product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Selected product ID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a0e49d086b551af8e74068d74c6588f25}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_a0e49d086b551af8e74068d74c6588f25} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Submits deletion of previously selected product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Selected product ID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_acfab82c8e9d7525f6a336f1c9f98715a}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Details@{Details}}
+\index{Details@{Details}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Details()}{Details()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_acfab82c8e9d7525f6a336f1c9f98715a} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Details (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Displays details of selected product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a7767af51fbf54cf3c5e0d953f80aca50}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Edit@{Edit}}
+\index{Edit@{Edit}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_a7767af51fbf54cf3c5e0d953f80aca50} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product}{Product}}}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Submits edit of previously selected product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of selected product.\\
+\hline
+{\em product} & \doxylink{namespace_product_list_app_1_1_data}{Data} pulled from edit form.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a51849729ac0de760ec9f4e5878abc762}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Edit@{Edit}}
+\index{Edit@{Edit}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_a51849729ac0de760ec9f4e5878abc762} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Redirects to view that allows to edit selected product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Selected product ID.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_adbf3c611c4c4124972cf121e603fb4ec}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Index@{Index}}
+\index{Index@{Index}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_adbf3c611c4c4124972cf121e603fb4ec} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Index (\begin{DoxyParamCaption}\item[{int?}]{list\+Id}{, }\item[{string?}]{list\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Returns view with products in selected list. Also allows to add new products. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Id} & ID of selected list of products.\\
+\hline
+{\em list\+Name} & Name of selected list of products.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_a23a340a13ab9fbc830e9fb279dc6d87c}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!Index@{Index}}
+\index{Index@{Index}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_a23a340a13ab9fbc830e9fb279dc6d87c} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_products}{Products}}}]{products}{}\end{DoxyParamCaption})}
+
+
+
+If data provided by user in form is correct, adds new product to the list. Otherwise displays corresponding error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em products} & \doxylink{namespace_product_list_app_1_1_data}{Data} pulled from form.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_products_controller_abcf60e9f7ed23e9b1342f0edc4342815}\index{ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}!UpdateCheckbox@{UpdateCheckbox}}
+\index{UpdateCheckbox@{UpdateCheckbox}!ProductListApp.Controllers.ProductsController@{ProductListApp.Controllers.ProductsController}}
+\doxysubsubsection{\texorpdfstring{UpdateCheckbox()}{UpdateCheckbox()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_products_controller_abcf60e9f7ed23e9b1342f0edc4342815} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Products\+Controller.\+Update\+Checkbox (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{bool}]{is\+Checked}{}\end{DoxyParamCaption})}
+
+
+
+Updates checkbox to given value that is corresponding to status field of product identified by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of product.\\
+\hline
+{\em is\+Checked} & Checkbox value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

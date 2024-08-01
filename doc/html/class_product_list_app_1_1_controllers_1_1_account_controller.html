@@ -94,6 +94,9 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ProductListApp.Controllers.AccountController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller class for managing user accounts.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ProductListApp.Controllers.AccountController:</div>
 <div class="dyncontent">
@@ -106,22 +109,137 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc728f96fba9365edad3c13e4a3fd762" id="r_adc728f96fba9365edad3c13e4a3fd762"><td class="memItemLeft" align="right" valign="top"><a id="adc728f96fba9365edad3c13e4a3fd762" name="adc728f96fba9365edad3c13e4a3fd762"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AccountController</b> (UserManager&lt; <a class="el" href="class_product_list_app_1_1_models_1_1_user.html">User</a> &gt; userManager, SignInManager&lt; <a class="el" href="class_product_list_app_1_1_models_1_1_user.html">User</a> &gt; signInManager)</td></tr>
 <tr class="separator:adc728f96fba9365edad3c13e4a3fd762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d245391f02a619d7f50792081bfdc40" id="r_a3d245391f02a619d7f50792081bfdc40"><td class="memItemLeft" align="right" valign="top"><a id="a3d245391f02a619d7f50792081bfdc40" name="a3d245391f02a619d7f50792081bfdc40"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Register</b> ()</td></tr>
+<tr class="memitem:a3d245391f02a619d7f50792081bfdc40" id="r_a3d245391f02a619d7f50792081bfdc40"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d245391f02a619d7f50792081bfdc40">Register</a> ()</td></tr>
+<tr class="memdesc:a3d245391f02a619d7f50792081bfdc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns registration view with empty fields.  <br /></td></tr>
 <tr class="separator:a3d245391f02a619d7f50792081bfdc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f581ff54139c90d43e520dc86152d6" id="r_ad7f581ff54139c90d43e520dc86152d6"><td class="memItemLeft" align="right" valign="top"><a id="ad7f581ff54139c90d43e520dc86152d6" name="ad7f581ff54139c90d43e520dc86152d6"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Register</b> (<a class="el" href="class_product_list_app_1_1_models_1_1_register.html">Register</a> registerData)</td></tr>
+<tr class="memitem:ad7f581ff54139c90d43e520dc86152d6" id="r_ad7f581ff54139c90d43e520dc86152d6"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7f581ff54139c90d43e520dc86152d6">Register</a> (<a class="el" href="class_product_list_app_1_1_models_1_1_register.html">Register</a> registerData)</td></tr>
+<tr class="memdesc:ad7f581ff54139c90d43e520dc86152d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">If registration data is correct, then create new user, log them in and redirect to main page. Otherwise displays errors for each invalid field in registration form.  <br /></td></tr>
 <tr class="separator:ad7f581ff54139c90d43e520dc86152d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec16a1aefb4df08039781760f815acb4" id="r_aec16a1aefb4df08039781760f815acb4"><td class="memItemLeft" align="right" valign="top"><a id="aec16a1aefb4df08039781760f815acb4" name="aec16a1aefb4df08039781760f815acb4"></a>
-IActionResult&#160;</td><td class="memItemRight" valign="bottom"><b>Login</b> ()</td></tr>
+<tr class="memitem:aec16a1aefb4df08039781760f815acb4" id="r_aec16a1aefb4df08039781760f815acb4"><td class="memItemLeft" align="right" valign="top">IActionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec16a1aefb4df08039781760f815acb4">Login</a> ()</td></tr>
+<tr class="memdesc:aec16a1aefb4df08039781760f815acb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns login view with empty fields.  <br /></td></tr>
 <tr class="separator:aec16a1aefb4df08039781760f815acb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a676f4c15c0fc86df76ffaf3d679d6181" id="r_a676f4c15c0fc86df76ffaf3d679d6181"><td class="memItemLeft" align="right" valign="top"><a id="a676f4c15c0fc86df76ffaf3d679d6181" name="a676f4c15c0fc86df76ffaf3d679d6181"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Login</b> (<a class="el" href="class_product_list_app_1_1_models_1_1_login.html">Login</a> loginData)</td></tr>
+<tr class="memitem:a676f4c15c0fc86df76ffaf3d679d6181" id="r_a676f4c15c0fc86df76ffaf3d679d6181"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a676f4c15c0fc86df76ffaf3d679d6181">Login</a> (<a class="el" href="class_product_list_app_1_1_models_1_1_login.html">Login</a> loginData)</td></tr>
+<tr class="memdesc:a676f4c15c0fc86df76ffaf3d679d6181"><td class="mdescLeft">&#160;</td><td class="mdescRight">If login data is correct, then log the user in and redirect to main page. Otherwise displays errors for each invalid field in login form.  <br /></td></tr>
 <tr class="separator:a676f4c15c0fc86df76ffaf3d679d6181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f0e6988c9b1e25671dd2eb943d10c5" id="r_aa3f0e6988c9b1e25671dd2eb943d10c5"><td class="memItemLeft" align="right" valign="top"><a id="aa3f0e6988c9b1e25671dd2eb943d10c5" name="aa3f0e6988c9b1e25671dd2eb943d10c5"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Logout</b> ()</td></tr>
+<tr class="memitem:aa3f0e6988c9b1e25671dd2eb943d10c5" id="r_aa3f0e6988c9b1e25671dd2eb943d10c5"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f0e6988c9b1e25671dd2eb943d10c5">Logout</a> ()</td></tr>
+<tr class="memdesc:aa3f0e6988c9b1e25671dd2eb943d10c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs out current user and redirects to main page.  <br /></td></tr>
 <tr class="separator:aa3f0e6988c9b1e25671dd2eb943d10c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller class for managing user accounts. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aec16a1aefb4df08039781760f815acb4" name="aec16a1aefb4df08039781760f815acb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec16a1aefb4df08039781760f815acb4">&#9670;&#160;</a></span>Login() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IActionResult ProductListApp.Controllers.AccountController.Login </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns login view with empty fields. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a676f4c15c0fc86df76ffaf3d679d6181" name="a676f4c15c0fc86df76ffaf3d679d6181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676f4c15c0fc86df76ffaf3d679d6181">&#9670;&#160;</a></span>Login() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.AccountController.Login </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_login.html">Login</a></td>          <td class="paramname"><span class="paramname"><em>loginData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If login data is correct, then log the user in and redirect to main page. Otherwise displays errors for each invalid field in login form. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loginData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa3f0e6988c9b1e25671dd2eb943d10c5" name="aa3f0e6988c9b1e25671dd2eb943d10c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f0e6988c9b1e25671dd2eb943d10c5">&#9670;&#160;</a></span>Logout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.AccountController.Logout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs out current user and redirects to main page. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a3d245391f02a619d7f50792081bfdc40" name="a3d245391f02a619d7f50792081bfdc40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d245391f02a619d7f50792081bfdc40">&#9670;&#160;</a></span>Register() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IActionResult ProductListApp.Controllers.AccountController.Register </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns registration view with empty fields. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad7f581ff54139c90d43e520dc86152d6" name="ad7f581ff54139c90d43e520dc86152d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f581ff54139c90d43e520dc86152d6">&#9670;&#160;</a></span>Register() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.AccountController.Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_register.html">Register</a></td>          <td class="paramname"><span class="paramname"><em>registerData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If registration data is correct, then create new user, log them in and redirect to main page. Otherwise displays errors for each invalid field in registration form. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">registerData</td><td><a class="el" href="namespace_product_list_app_1_1_data.html">Data</a> entered by user into the form</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Development/ProductListApp/ProductListApp/Controllers/<b>AccountController.cs</b></li>
 </ul>

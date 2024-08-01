@@ -94,6 +94,9 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">ProductListApp.Controllers.ProductsController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller for products in list.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ProductListApp.Controllers.ProductsController:</div>
 <div class="dyncontent">
@@ -106,31 +109,257 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae29866a9d58e5fbd8a658cffe84281b6" id="r_ae29866a9d58e5fbd8a658cffe84281b6"><td class="memItemLeft" align="right" valign="top"><a id="ae29866a9d58e5fbd8a658cffe84281b6" name="ae29866a9d58e5fbd8a658cffe84281b6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ProductsController</b> (<a class="el" href="class_product_list_app_1_1_data_1_1_product_list_app_context.html">ProductListAppContext</a> context)</td></tr>
 <tr class="separator:ae29866a9d58e5fbd8a658cffe84281b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf3c611c4c4124972cf121e603fb4ec" id="r_adbf3c611c4c4124972cf121e603fb4ec"><td class="memItemLeft" align="right" valign="top"><a id="adbf3c611c4c4124972cf121e603fb4ec" name="adbf3c611c4c4124972cf121e603fb4ec"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (int? listId, string? listName)</td></tr>
+<tr class="memitem:adbf3c611c4c4124972cf121e603fb4ec" id="r_adbf3c611c4c4124972cf121e603fb4ec"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf3c611c4c4124972cf121e603fb4ec">Index</a> (int? listId, string? listName)</td></tr>
+<tr class="memdesc:adbf3c611c4c4124972cf121e603fb4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns view with products in selected list. Also allows to add new products.  <br /></td></tr>
 <tr class="separator:adbf3c611c4c4124972cf121e603fb4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a340a13ab9fbc830e9fb279dc6d87c" id="r_a23a340a13ab9fbc830e9fb279dc6d87c"><td class="memItemLeft" align="right" valign="top"><a id="a23a340a13ab9fbc830e9fb279dc6d87c" name="a23a340a13ab9fbc830e9fb279dc6d87c"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (<a class="el" href="class_product_list_app_1_1_models_1_1_products.html">Products</a> products)</td></tr>
+<tr class="memitem:a23a340a13ab9fbc830e9fb279dc6d87c" id="r_a23a340a13ab9fbc830e9fb279dc6d87c"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23a340a13ab9fbc830e9fb279dc6d87c">Index</a> (<a class="el" href="class_product_list_app_1_1_models_1_1_products.html">Products</a> products)</td></tr>
+<tr class="memdesc:a23a340a13ab9fbc830e9fb279dc6d87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If data provided by user in form is correct, adds new product to the list. Otherwise displays corresponding error message.  <br /></td></tr>
 <tr class="separator:a23a340a13ab9fbc830e9fb279dc6d87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfab82c8e9d7525f6a336f1c9f98715a" id="r_acfab82c8e9d7525f6a336f1c9f98715a"><td class="memItemLeft" align="right" valign="top"><a id="acfab82c8e9d7525f6a336f1c9f98715a" name="acfab82c8e9d7525f6a336f1c9f98715a"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Details</b> (int? id)</td></tr>
+<tr class="memitem:acfab82c8e9d7525f6a336f1c9f98715a" id="r_acfab82c8e9d7525f6a336f1c9f98715a"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfab82c8e9d7525f6a336f1c9f98715a">Details</a> (int? id)</td></tr>
+<tr class="memdesc:acfab82c8e9d7525f6a336f1c9f98715a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays details of selected product.  <br /></td></tr>
 <tr class="separator:acfab82c8e9d7525f6a336f1c9f98715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51849729ac0de760ec9f4e5878abc762" id="r_a51849729ac0de760ec9f4e5878abc762"><td class="memItemLeft" align="right" valign="top"><a id="a51849729ac0de760ec9f4e5878abc762" name="a51849729ac0de760ec9f4e5878abc762"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Edit</b> (int? id)</td></tr>
+<tr class="memitem:a51849729ac0de760ec9f4e5878abc762" id="r_a51849729ac0de760ec9f4e5878abc762"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51849729ac0de760ec9f4e5878abc762">Edit</a> (int? id)</td></tr>
+<tr class="memdesc:a51849729ac0de760ec9f4e5878abc762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects to view that allows to edit selected product.  <br /></td></tr>
 <tr class="separator:a51849729ac0de760ec9f4e5878abc762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7767af51fbf54cf3c5e0d953f80aca50" id="r_a7767af51fbf54cf3c5e0d953f80aca50"><td class="memItemLeft" align="right" valign="top"><a id="a7767af51fbf54cf3c5e0d953f80aca50" name="a7767af51fbf54cf3c5e0d953f80aca50"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Edit</b> (int id, <a class="el" href="class_product_list_app_1_1_models_1_1_product.html">Product</a> product)</td></tr>
+<tr class="memitem:a7767af51fbf54cf3c5e0d953f80aca50" id="r_a7767af51fbf54cf3c5e0d953f80aca50"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7767af51fbf54cf3c5e0d953f80aca50">Edit</a> (int id, <a class="el" href="class_product_list_app_1_1_models_1_1_product.html">Product</a> product)</td></tr>
+<tr class="memdesc:a7767af51fbf54cf3c5e0d953f80aca50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits edit of previously selected product.  <br /></td></tr>
 <tr class="separator:a7767af51fbf54cf3c5e0d953f80aca50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30bb0dc51eecdc767897ab9bceac96f" id="r_ac30bb0dc51eecdc767897ab9bceac96f"><td class="memItemLeft" align="right" valign="top"><a id="ac30bb0dc51eecdc767897ab9bceac96f" name="ac30bb0dc51eecdc767897ab9bceac96f"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Delete</b> (int? id)</td></tr>
+<tr class="memitem:ac30bb0dc51eecdc767897ab9bceac96f" id="r_ac30bb0dc51eecdc767897ab9bceac96f"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30bb0dc51eecdc767897ab9bceac96f">Delete</a> (int? id)</td></tr>
+<tr class="memdesc:ac30bb0dc51eecdc767897ab9bceac96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects to page that allows to delete selected product.  <br /></td></tr>
 <tr class="separator:ac30bb0dc51eecdc767897ab9bceac96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e49d086b551af8e74068d74c6588f25" id="r_a0e49d086b551af8e74068d74c6588f25"><td class="memItemLeft" align="right" valign="top"><a id="a0e49d086b551af8e74068d74c6588f25" name="a0e49d086b551af8e74068d74c6588f25"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteConfirmed</b> (int id)</td></tr>
+<tr class="memitem:a0e49d086b551af8e74068d74c6588f25" id="r_a0e49d086b551af8e74068d74c6588f25"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e49d086b551af8e74068d74c6588f25">DeleteConfirmed</a> (int id)</td></tr>
+<tr class="memdesc:a0e49d086b551af8e74068d74c6588f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits deletion of previously selected product.  <br /></td></tr>
 <tr class="separator:a0e49d086b551af8e74068d74c6588f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf60e9f7ed23e9b1342f0edc4342815" id="r_abcf60e9f7ed23e9b1342f0edc4342815"><td class="memItemLeft" align="right" valign="top"><a id="abcf60e9f7ed23e9b1342f0edc4342815" name="abcf60e9f7ed23e9b1342f0edc4342815"></a>
-async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCheckbox</b> (int id, bool isChecked)</td></tr>
+<tr class="memitem:abcf60e9f7ed23e9b1342f0edc4342815" id="r_abcf60e9f7ed23e9b1342f0edc4342815"><td class="memItemLeft" align="right" valign="top">async Task&lt; IActionResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcf60e9f7ed23e9b1342f0edc4342815">UpdateCheckbox</a> (int id, bool isChecked)</td></tr>
+<tr class="memdesc:abcf60e9f7ed23e9b1342f0edc4342815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates checkbox to given value that is corresponding to status field of product identified by ID.  <br /></td></tr>
 <tr class="separator:abcf60e9f7ed23e9b1342f0edc4342815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller for products in list. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac30bb0dc51eecdc767897ab9bceac96f" name="ac30bb0dc51eecdc767897ab9bceac96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30bb0dc51eecdc767897ab9bceac96f">&#9670;&#160;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Delete </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects to page that allows to delete selected product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Selected product ID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0e49d086b551af8e74068d74c6588f25" name="a0e49d086b551af8e74068d74c6588f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e49d086b551af8e74068d74c6588f25">&#9670;&#160;</a></span>DeleteConfirmed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.DeleteConfirmed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submits deletion of previously selected product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Selected product ID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="acfab82c8e9d7525f6a336f1c9f98715a" name="acfab82c8e9d7525f6a336f1c9f98715a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfab82c8e9d7525f6a336f1c9f98715a">&#9670;&#160;</a></span>Details()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Details </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays details of selected product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a7767af51fbf54cf3c5e0d953f80aca50" name="a7767af51fbf54cf3c5e0d953f80aca50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7767af51fbf54cf3c5e0d953f80aca50">&#9670;&#160;</a></span>Edit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Edit </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_product.html">Product</a></td>          <td class="paramname"><span class="paramname"><em>product</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submits edit of previously selected product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of selected product.</td></tr>
+    <tr><td class="paramname">product</td><td><a class="el" href="namespace_product_list_app_1_1_data.html">Data</a> pulled from edit form.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a51849729ac0de760ec9f4e5878abc762" name="a51849729ac0de760ec9f4e5878abc762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51849729ac0de760ec9f4e5878abc762">&#9670;&#160;</a></span>Edit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Edit </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects to view that allows to edit selected product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Selected product ID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="adbf3c611c4c4124972cf121e603fb4ec" name="adbf3c611c4c4124972cf121e603fb4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf3c611c4c4124972cf121e603fb4ec">&#9670;&#160;</a></span>Index() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Index </td>
+          <td>(</td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>listId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string?</td>          <td class="paramname"><span class="paramname"><em>listName</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns view with products in selected list. Also allows to add new products. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listId</td><td>ID of selected list of products.</td></tr>
+    <tr><td class="paramname">listName</td><td>Name of selected list of products.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a23a340a13ab9fbc830e9fb279dc6d87c" name="a23a340a13ab9fbc830e9fb279dc6d87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a340a13ab9fbc830e9fb279dc6d87c">&#9670;&#160;</a></span>Index() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.Index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_product_list_app_1_1_models_1_1_products.html">Products</a></td>          <td class="paramname"><span class="paramname"><em>products</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If data provided by user in form is correct, adds new product to the list. Otherwise displays corresponding error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">products</td><td><a class="el" href="namespace_product_list_app_1_1_data.html">Data</a> pulled from form.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abcf60e9f7ed23e9b1342f0edc4342815" name="abcf60e9f7ed23e9b1342f0edc4342815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf60e9f7ed23e9b1342f0edc4342815">&#9670;&#160;</a></span>UpdateCheckbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IActionResult &gt; ProductListApp.Controllers.ProductsController.UpdateCheckbox </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isChecked</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates checkbox to given value that is corresponding to status field of product identified by ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of product.</td></tr>
+    <tr><td class="paramname">isChecked</td><td>Checkbox value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/Development/ProductListApp/ProductListApp/Controllers/<b>ProductsController.cs</b></li>
 </ul>

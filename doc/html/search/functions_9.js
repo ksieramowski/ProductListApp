@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['up_0',['Up',['../class_product_list_app_1_1_migrations_1_1_initial_create.html#af03314cd6b9bd62c2303d4a8583d51da',1,'ProductListApp::Migrations::InitialCreate']]]
+  ['register_0',['Register',['../class_product_list_app_1_1_controllers_1_1_account_controller.html#a3d245391f02a619d7f50792081bfdc40',1,'ProductListApp.Controllers.AccountController.Register()'],['../class_product_list_app_1_1_controllers_1_1_account_controller.html#ad7f581ff54139c90d43e520dc86152d6',1,'ProductListApp.Controllers.AccountController.Register(Register registerData)'],['../class_test_1_1_chrome_1_1_tests.html#a1b544368a51eace7a9aa78e9840c9a7e',1,'Test.Chrome.Tests.Register()'],['../class_test_1_1_chrome_1_1_tests.html#a612499d136132b4fdd8caa2d760890ef',1,'Test.Chrome.Tests.Register(TestSeed seed)']]]
 ];

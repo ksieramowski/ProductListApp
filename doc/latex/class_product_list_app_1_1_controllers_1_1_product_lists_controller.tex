@@ -1,5 +1,10 @@
 \doxysection{Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller Class Reference}
 \hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller}{}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+
+
+Controller for list of product lists for each user.  
+
+
 Inheritance diagram for Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,24 +17,129 @@ Inheritance diagram for Product\+List\+App.\+Controllers.\+Product\+Lists\+Contr
 \Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb6be843b87cc9f1429ea51524176a77}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb6be843b87cc9f1429ea51524176a77} 
 {\bfseries Product\+Lists\+Controller} (\mbox{\hyperlink{class_product_list_app_1_1_data_1_1_product_list_app_context}{Product\+List\+App\+Context}} context, User\+Manager$<$ \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_user}{User}} $>$ user\+Manager, IHttp\+Context\+Accessor http\+Context\+Accessor)
 \item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a485434fec0a94709250816506ed92024}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a485434fec0a94709250816506ed92024} 
-async Task$<$ IAction\+Result $>$ {\bfseries Index} ()
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_abc6b14f1a26b2a96d74f55c1ba78ad69}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_abc6b14f1a26b2a96d74f55c1ba78ad69} 
-async Task$<$ IAction\+Result $>$ {\bfseries Index} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_lists}{Product\+Lists}} product\+Lists)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb55696c1801ea0e78f7111ed14826a9}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb55696c1801ea0e78f7111ed14826a9} 
-async Task$<$ IAction\+Result $>$ {\bfseries Edit} (int? id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a0a3b86de0201995cf474e29aa60bc584}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a0a3b86de0201995cf474e29aa60bc584} 
-async Task$<$ IAction\+Result $>$ {\bfseries Edit} (int id, \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_list}{Product\+List}} product\+List)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a81f9aa007c1a5a67a2a9aebd79810408}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a81f9aa007c1a5a67a2a9aebd79810408} 
-async Task$<$ IAction\+Result $>$ {\bfseries Delete} (int? id)
-\item 
-\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a8407b7506319aff49661fba956b3ed23}\label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a8407b7506319aff49661fba956b3ed23} 
-async Task$<$ IAction\+Result $>$ {\bfseries Delete\+Confirmed} (int id)
-\end{DoxyCompactItemize}
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a485434fec0a94709250816506ed92024}{Index}} ()
+\begin{DoxyCompactList}\small\item\em Returns product list view including form that enables user to create new product list and list of existing product lists. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_abc6b14f1a26b2a96d74f55c1ba78ad69}{Index}} (\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_lists}{Product\+Lists}} product\+Lists)
+\begin{DoxyCompactList}\small\item\em Creates new product list if all field values are valid. Otherwise displays error. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb55696c1801ea0e78f7111ed14826a9}{Edit}} (int? id)
+\begin{DoxyCompactList}\small\item\em Redirects to view that allows editing of selected product list. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a0a3b86de0201995cf474e29aa60bc584}{Edit}} (int id, \mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_list}{Product\+List}} product\+List)
+\begin{DoxyCompactList}\small\item\em Submits edit of product list. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a81f9aa007c1a5a67a2a9aebd79810408}{Delete}} (int? id)
+\begin{DoxyCompactList}\small\item\em Redirects to view that allows to delete selected product list. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a8407b7506319aff49661fba956b3ed23}{Delete\+Confirmed}} (int id)
+\begin{DoxyCompactList}\small\item\em Submits deletion of selected product list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controller for list of product lists for each user. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a81f9aa007c1a5a67a2a9aebd79810408}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!Delete@{Delete}}
+\index{Delete@{Delete}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a81f9aa007c1a5a67a2a9aebd79810408} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Delete (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Redirects to view that allows to delete selected product list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of selected product list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a8407b7506319aff49661fba956b3ed23}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!DeleteConfirmed@{DeleteConfirmed}}
+\index{DeleteConfirmed@{DeleteConfirmed}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{DeleteConfirmed()}{DeleteConfirmed()}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a8407b7506319aff49661fba956b3ed23} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Delete\+Confirmed (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Submits deletion of selected product list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of selected product list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a0a3b86de0201995cf474e29aa60bc584}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!Edit@{Edit}}
+\index{Edit@{Edit}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a0a3b86de0201995cf474e29aa60bc584} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_list}{Product\+List}}}]{product\+List}{}\end{DoxyParamCaption})}
+
+
+
+Submits edit of product list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of sleceted list of products\\
+\hline
+{\em product\+List} & Selected list of products structure passed by form\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb55696c1801ea0e78f7111ed14826a9}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!Edit@{Edit}}
+\index{Edit@{Edit}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_aeb55696c1801ea0e78f7111ed14826a9} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Edit (\begin{DoxyParamCaption}\item[{int?}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Redirects to view that allows editing of selected product list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of selected product list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a485434fec0a94709250816506ed92024}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!Index@{Index}}
+\index{Index@{Index}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_a485434fec0a94709250816506ed92024} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns product list view including form that enables user to create new product list and list of existing product lists. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_product_list_app_1_1_controllers_1_1_product_lists_controller_abc6b14f1a26b2a96d74f55c1ba78ad69}\index{ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}!Index@{Index}}
+\index{Index@{Index}!ProductListApp.Controllers.ProductListsController@{ProductListApp.Controllers.ProductListsController}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_product_list_app_1_1_controllers_1_1_product_lists_controller_abc6b14f1a26b2a96d74f55c1ba78ad69} 
+async Task$<$ IAction\+Result $>$ Product\+List\+App.\+Controllers.\+Product\+Lists\+Controller.\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_product_list_app_1_1_models_1_1_product_lists}{Product\+Lists}}}]{product\+Lists}{}\end{DoxyParamCaption})}
+
+
+
+Creates new product list if all field values are valid. Otherwise displays error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Lists} & Product list structure passed from form\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

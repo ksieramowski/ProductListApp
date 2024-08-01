@@ -10,6 +10,10 @@ namespace ProductListApp.Controllers {
             _userManager = userManager;
         }
 
+        /// <summary>
+        /// Returns username of current user or null.
+        /// </summary>
+        /// <returns></returns>
         public async Task<string?> GetUserNameAsync() {
             var user = await _userManager.GetUserAsync(User);
             if (user != null) {

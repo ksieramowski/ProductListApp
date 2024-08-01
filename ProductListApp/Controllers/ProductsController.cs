@@ -14,6 +14,9 @@ using ProductListApp.Data;
 using ProductListApp.Models;
 
 namespace ProductListApp.Controllers {
+    /// <summary>
+    /// Controller for products in list.
+    /// </summary>
     [Authorize]
     public class ProductsController : Controller {
         private readonly ProductListAppContext _context;
@@ -22,6 +25,13 @@ namespace ProductListApp.Controllers {
             _context = context;
         }
 
+        /// <summary>
+        /// Returns view with products in selected list.
+        /// Also allows to add new products.
+        /// </summary>
+        /// <param name="listId">ID of selected list of products.</param>
+        /// <param name="listName">Name of selected list of products.</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Index(int? listId, string? listName) {
             if (listId == 0 || listId == null) {
@@ -39,6 +49,12 @@ namespace ProductListApp.Controllers {
             return View(new Products(listName, new Product(), await GetProducts(listId)));
         }
 
+        /// <summary>
+        /// If data provided by user in form is correct, adds new product to the list.
+        /// Otherwise displays corresponding error message.
+        /// </summary>
+        /// <param name="products">Data pulled from form.</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Index(Products products) {
             products.NewProduct.Name = products.NewProduct.Name?.Trim();
@@ -61,6 +77,11 @@ namespace ProductListApp.Controllers {
             return View(products);
         }
 
+        /// <summary>
+        /// Displays details of selected product.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Details(int? id) {
             if (id == null) {  return NotFound(); }
@@ -72,27 +93,11 @@ namespace ProductListApp.Controllers {
             return View(product);
         }
 
-        //[HttpGet]
-        //public IActionResult Create() {
-        //    return RedirectToAction(nameof(Index));
-        //    //return View();
-        //}
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("Id,Name,Price,Quantity")] Product product) {
-        //    if (ModelState.IsValid) {
-        //        _context.Add(product);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
-        //    }
-            
-        //    TempData["Product"] = JsonSerializer.Serialize(product);
-
-        //    return RedirectToAction(nameof(Index));
-        //    //return View(product);
-        //}
-
+        /// <summary>
+        /// Redirects to view that allows to edit selected product.
+        /// </summary>
+        /// <param name="id">Selected product ID.</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? id) {
             if (id == null) {
@@ -116,6 +121,12 @@ namespace ProductListApp.Controllers {
             return View(product);
         }
 
+        /// <summary>
+        /// Submits edit of previously selected product.
+        /// </summary>
+        /// <param name="id">ID of selected product.</param>
+        /// <param name="product">Data pulled from edit form.</param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Product product) {
@@ -147,6 +158,11 @@ namespace ProductListApp.Controllers {
             return View(product);
         }
 
+        /// <summary>
+        /// Redirects to page that allows to delete selected product.
+        /// </summary>
+        /// <param name="id">Selected product ID.</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? id) {
             if (id == null) {
@@ -168,6 +184,11 @@ namespace ProductListApp.Controllers {
             return View(product);
         }
 
+        /// <summary>
+        /// Submits deletion of previously selected product.
+        /// </summary>
+        /// <param name="id">Selected product ID.</param>
+        /// <returns></returns>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id) {
@@ -180,6 +201,12 @@ namespace ProductListApp.Controllers {
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>
+        /// Updates checkbox to given value that is corresponding to status field of product identified by ID.
+        /// </summary>
+        /// <param name="id">ID of product.</param>
+        /// <param name="isChecked">Checkbox value.</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> UpdateCheckbox(int id, bool isChecked) {
             var item = await _context.Products.FindAsync(id);
@@ -190,10 +217,20 @@ namespace ProductListApp.Controllers {
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>
+        /// Checks of product with given ID exists
+        /// </summary>
+        /// <param name="id">ID of product</param>
+        /// <returns></returns>
         private bool ProductExists(int id) {
             return _context.Products.Any(e => e.Id == id);
         }
 
+        /// <summary>
+        /// Returns list of products in product list with given ID.
+        /// </summary>
+        /// <param name="listID"></param>
+        /// <returns></returns>
         private async Task<IEnumerable<Product>> GetProducts(int? listID) {
             return await _context.Products.Where(o => o.ProductListId == listID).ToListAsync();
         }
